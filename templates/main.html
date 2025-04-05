@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Хранение паролей</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Хранение паролей</h1>
+    <form method="post" action="{{ url_for('store_password') }}">
+      <input type="text" name="login" placeholder="Логин" required>
+      <br><br>
+      <input type="password" name="password" placeholder="Пароль" required>
+      <br><br>
+      <button type="submit">Сохранить</button>
+    </form>
+    {% if encrypted %}
+      <h2>Зашифрованный пароль:</h2>
+      <p>{{ encrypted }}</p>
+    {% endif %}
+    <h2>Сохраненные данные:</h2>
+    <ul>
+      {% for entry in passwords %}
+        <li>{{ entry.login }}: {{ entry.encrypted }}</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}" class="button">На главную</a>
+  </div>
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

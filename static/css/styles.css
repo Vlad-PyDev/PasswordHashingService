@@ -1,0 +1,35 @@
+/* Project32 Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background: #fafafa;
+  padding: 30px 50px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+.button {
+  background-color: #6a5acd;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+input {
+  padding: 8px;
+  margin: 5px;
+  width: 85%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
